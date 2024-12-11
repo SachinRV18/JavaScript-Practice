@@ -1,0 +1,168 @@
+ <!-- - Part : 1 -->
+alert("Hello") # added a alert msg
+<script src="index.js"></script> # to link an external java script file
+we can also run the code from the browser console :
+right click on browser >> select inspect >> then console >> "act like a text editor"
+we can comment the code using two slashes (//) in JS.
+console.log("data") : whatever the data we enter inside the console.log it will displayed in the console of the browser.
+
+ <!-- - Part : 2 -->
+ variables : we can declare a variable using (var, let and const)
+ var keyword is depricated in ES6, so in modern JS we are not using anymore.
+ ES6 : means ECMAScript 6 or ES2015
+ JS always follow top down approch
+ var greeting;  // conditionally rendering some data
+ <!-- Rules and Convention of Variables -->
+1. Variables is starts with letters or _  or $.
+camelcase : example - firstName
+Pascalcase : example - FirstName
+var and let are same.
+If we use const we cannot reassign its values, it will throw an error.
+Note: we cannot change the value of the constant variable, but we can change the "value of the object" of constant variable
+
+ <!-- - Part : 3 -->
+ Datatypes in JS
+ 
+ 1. Primitive Datatypes
+ stored directly in the location the variable access
+ stored in stack
+ string, number, boolean, null, undefined, symbol
+
+ 2. Reference Datatypes 
+ accessed by reference (key)
+ stored in heap, and points to location in memory
+ arrays, object Literals, Functions
+
+ "typeof" function used in JS to know the data type of the variable
+
+  <!-- - Part : 4 -->
+  <!-- Type convention -->
+conversion of one data type into another
+console.log(val.length) : it will work only for strings it will print total number of characters in the string.
+It is a property of a string
+
+
+we can convert also using toString() method
+val.toFixed(2) the toFixed used to define how many decimals we want example 2.00
+
+parseInt() this method used to convert into number from any data type
+
+type cohesion : if frst letter is string means it will convert next one also an string and concatinate its value
+
+  <!-- - Part : 5 -->
+string and string methods
+concatination, Append, escaping, Length, concat, toChange case, indexing, indexOf(), charAt(), substring(), slice, split(), replace(), includes(), 
+
+  <!-- - Part : 6 -->
+
+val = Math.PI;
+val = Math.round(3.2)
+val = Math.ceil(3.1)  //above value
+val = Math.floor(3.1)  //lower/previous value
+val = Math.sqrt(4)
+val = Math.abs(-5)   // Absolute value.
+val = Math.pow(5, 2)   // power value.
+val = Math.min(2,3,5,67,887)  // Minimum
+val = Math.max(2,3,5,67,887)  // Maximum
+val = Math.random()  // Print the value within 0 to 1
+val = Math.random() * 20 // Print the value within 0 to 20
+val = Math.random() * 20 + 1// Print the value within 1 to 20
+val = Math.floor(Math.random() * 20 + 1)// Print the value within 1 to 20 (only whole number. Not Decimal values)
+
+  <!-- - Part : 7 -->
+
+  // Arrays.
+
+  // // arrays and methods
+
+// const number = [1,2,3,45,6,7,8,9,32];
+// const number2 = new Array(1,2,3,45,6,7,8,9,32);  // another way of creating an array
+// const fruits = new Array("apple", "bananana", "orange");  // astoring strings in array
+// // const mixed = new Array("apple", "bananana", " orange", 1, 2,3,4,5, true, undefined, null);  // storing multiple types of data's in array
+// // // console.log(number2)
+// // // console.log(fruits)
+// // // console.log(mixed)
+
+// let val;
+// // val = number.length; // array length
+
+// // val = Array.isArray(number); // to check its an array or not
+
+// // val = number[3] // to get a single value using indexing
+
+// // // insert or replace
+// // number[1] = 100;
+
+// // // find the index value
+// // val = number.indexOf(45);
+
+// // //Mutating the array
+// // //add a number to the end of an array
+// // number.push(2590);
+
+// // // add to the front
+// // number.unshift(120);
+
+// // //remove the last number from the array.
+// // number.pop(2590);
+
+// // // remove the frst number from the array.
+// // number.shift(120)
+
+// // console.log(number);
+
+// // //splicing
+// // number.splice(1,1)  // remove an element from pointing the index
+// // console.log(number);
+
+// // reverse the number
+// // number.reverse();
+
+// // concat the numbers
+// // val = number.concat(number2);
+
+// // sort the array
+// // val = fruits.sort();
+
+// // // sort the numbers
+// // val = number.sort()  // it will sort based on the first digit.
+
+// // // sort ascending order
+// // val = number.sort(function(x, y) {
+// //     return x-y;
+// // });
+
+// // sort decending order
+// val = number.sort(function(x, y) {
+//     return y - x;
+// });
+
+// console.log(val)
+
+ <!-- - Part : 8 -->
+
+ Template Literals : without using a double quotes (" ") we can use the (` `) backtick to rendering a page in JS is called as template literals.
+
+ // Object literals
+
+we have to take the property of the object means we use the "This" keyword.
+
+ <!-- - Part : 9 -->
+ // conditional and comparisions
+ syntax
+if (something){
+    do something;
+}else{
+    do something else
+}
+
+note : if we use === it checks the value and also the type of a variable
+
+loops in JS
+for loops
+for of loop
+while loop
+do while loop
+for in loop.
+
+ <!-- - Part : 10 -->
