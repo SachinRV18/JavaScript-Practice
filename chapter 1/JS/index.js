@@ -523,3 +523,155 @@
 //   console.log(x); // x is the key
 //   console.log(person[x]); // it gives the value
 // }
+
+// 12-12-2024
+// let age = 18;
+// if (age >= 18) {
+//   console.log("Adult");
+// } else {
+//   console.log("Minor");
+// }
+
+// let time = 20;
+// if (time < 12) {
+//   console.log("Good Morning");
+// } else if (time < 18) {
+//   console.log("Good Afternoon");
+// } else {
+//   console.log("Good Evening");
+// }
+
+// let fruit = "apple";
+// switch (fruit) {
+//   case "apple":
+//     console.log("This is an apple.");
+//     break;
+//   case "banana":
+//     console.log("This is a banana.");
+//     break;
+//   default:
+//     console.log("Unknown fruit.");
+// }
+
+// let day = 2;
+// switch (day) {
+//   case 1:
+//     console.log("Monday");
+//     break;
+//   case 2:
+//     console.log("Tuesday");
+//     break;
+//   default:
+//     console.log("Weekend");
+// }
+
+// let i = 0;
+// while (i < 5) {
+//   console.log(i);
+//   i++;
+// }
+
+// let count = 3;
+// while (count > 0) {
+//   console.log("Countdown:", count);
+//   count--;
+// }
+
+// let x = 0;
+// do {
+//   console.log(x);
+//   x++;
+// } while (x < 3);
+
+// let n = 5;
+// do {
+//   console.log("Number:", n);
+//   n--;
+// } while (n > 0);
+
+// let a = 5,
+//   b = 10;
+// if (a > 0 || b < 5) {
+//   console.log("At least one condition is true.");
+// }
+
+// let loggedIn = false,
+//   isAdmin = true;
+// if (loggedIn || isAdmin) {
+//   console.log("Access granted.");
+// }
+
+// let x = 7,
+//   y = 12;
+// if (x > 5 && y > 10) {
+//   console.log("Both conditions are true.");
+// }
+
+// let isActive = true,
+//   hasSubscription = true;
+// if (isActive && hasSubscription) {
+//   console.log("User has access.");
+// }
+
+// let isLoggedIn = false;
+// if (!isLoggedIn) {
+//   console.log("Please log in.");
+// }
+
+// let lightOn = true;
+// console.log(!lightOn); // false
+
+// for (let i = 0; i < 5; i++) {
+//   console.log(i);
+// }
+
+// const colors = ["red", "green", "blue"];
+// for (let i = 0; i < colors.length; i++) {
+//   console.log(colors[i]);
+// }
+
+// let numbers = [1, 2, 3];
+// numbers.forEach((num) => console.log(num * 2));
+
+// let fruits = ["apple", "banana", "mango"];
+// fruits.forEach((fruit) => console.log(fruit));
+
+// function greet(name) {
+//   return `Hello, ${name}!`;
+// }
+// console.log(greet("Alice"));
+
+// function add(a, b) {
+//   return a + b;
+// }
+// console.log(add(3, 5));
+
+// const multiply = (a, b) => a * b;
+// console.log(multiply(4, 5));
+
+// const greet = (name) => `Hi, ${name}!`;
+// console.log(greet("Bob"));
+
+// function processUserInput(callback) {
+//   const name = "Alice";
+//   callback(name);
+// }
+
+// processUserInput((name) => console.log(`Hello, ${name}`));
+
+// function calculate(a, b, operation) {
+//   return operation(a, b);
+// }
+
+// const sum = calculate(5, 10, (x, y) => x + y);
+// console.log(sum); // 15
+
+// Variable Hoisting
+// console.log(a); // undefined
+// var a = 10;
+
+// Function Hoisting
+// greet();
+// function greet() {
+//   console.log("Hello!");
+// }
