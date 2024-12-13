@@ -353,16 +353,115 @@ function greet() {
     console.log("Hello!");
 }
 
+Callback and forEach
+    Callback: A function passed as an argument to another function, which can be executed later.
+    forEach: A method to iterate over array elements, executing a callback function for each element.
+    Ex: const numbers = [1, 2, 3];
+    numbers.forEach(num => console.log(num * 2)); // Callback prints each number doubled
+
+Reference to the UI
+    Using JavaScript, references to UI elements can be obtained using DOM methods like getElementById.
+
+    Example: const button = document.getElementById('submitButton');
+    button.textContent = 'Click Me';
+
+Object and Object Literal Creation
+    Object: A collection of properties (key-value pairs).
+    Object Literal: A shorthand syntax for creating objects using {}.
+    Example: const user = { name: 'Alice', age: 25 };
+    console.log(user.name); // Accessing property
 
 
+ Dot and Square Bracket Notation
+    Dot Notation: Access properties using .propertyName.
+    Square Bracket Notation: Access properties using ['propertyName'].
 
+    Example: 
+    const obj = { key: 'value' };
+    console.log(obj.key); // Dot notation
+    console.log(obj['key']); // Square bracket notation
 
+Method vs Function and this Keyword
+    Function: Independent code block that performs a task.
+    Method: A function attached to an object.
+    this: Refers to the object calling the method.
 
+    Example:
+    const person = {
+    name: 'Bob',
+    greet() {
+        console.log(`Hello, ${this.name}`); // 'this' refers to person
+    }
+    };
+    person.greet(); // Hello, Bob
 
+Shorthand Object Property
 
+    Shorthand is used when the variable name matches the property name.
 
+    Example: const name = 'Charlie';
+    const age = 30;
+    const user = { name, age }; // Shorthand
+    console.log(user); // { name: 'Charlie', age: 30 }
 
+    Math Object and Random Numbers
+    Math Object: Provides mathematical functions and constants.
+    Random Numbers: Generated using Math.random().
 
+    Example: console.log(Math.PI); // 3.141592653589793
+    console.log(Math.random()); // Random number between 0 and 1
+
+ Primitive and Reference Types
+    Primitive Types: Immutable (e.g., string, number, boolean).
+    Reference Types: Mutable, stored as references (e.g., object, array).
+        Difference:
+
+        Primitive values are copied by value, while reference types are copied by reference.
+
+        Example: let a = 5; // Primitive
+        let b = a;
+        b = 10;
+        console.log(a); // 5
+
+        const arr = [1, 2]; // Reference
+        const ref = arr;
+        ref.push(3);
+        console.log(arr); // [1, 2, 3]
+
+DOM and Selecting Elements
+    getElementById: Select by ID.
+    getElementsByClassName: Select by class.
+    getElementsByTagName: Select by tag.
+    Example:
+        document.getElementById('title').textContent = 'New Title'; // ID
+        document.getElementsByClassName('item')[0].style.color = 'red'; // Class
+        document.getElementsByTagName('p')[0].textContent = 'Paragraph updated'; // Tag
+
+Change HTML and Append Elements
+    Change HTML: Modify the inner content.
+    Append: Add new content.
+    Example:
+    document.getElementById('content').innerHTML = '<p>New Paragraph</p>';
+    const newElement = document.createElement('span');
+    newElement.textContent = 'Appended text';
+    document.body.appendChild(newElement);
+
+Change and Create Attributes
+    Change Attribute: Use setAttribute or property.
+    Create Attribute: Use setAttribute.
+    Example:
+    const img = document.getElementById('image');
+    img.setAttribute('src', 'newImage.png'); // Change or create
+
+Change Style and Add/Remove Classes
+    Change Style: Modify CSS properties directly.
+    Add/Remove Class: Use classList.
+    Example:
+    const element = document.getElementById('box');
+    element.style.backgroundColor = 'blue'; // Change style
+    element.classList.add('highlight'); // Add class
+    element.classList.remove('highlight'); // Remove class
+    element.classList.toggle('hidden'); // Toggle class
 
 
 

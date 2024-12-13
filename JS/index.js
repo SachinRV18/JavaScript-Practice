@@ -675,3 +675,72 @@
 // function greet() {
 //   console.log("Hello!");
 // }
+
+// // 1. Callback and forEach
+// const numbers = [1, 2, 3];
+// numbers.forEach((num) => console.log(num * 2)); // Callback prints each number doubled
+
+// // 2. Reference to the UI
+// const button = document.getElementById("submitButton");
+// button.textContent = "Click Me";
+
+// // 3. Object and Object Literal Creation
+// const user = { name: "Alice", age: 25 };
+// console.log(user.name); // Accessing property
+
+// // 4. Dot and Square Bracket Notation
+// const obj = { key: "value" };
+// console.log(obj.key); // Dot notation
+// console.log(obj["key"]); // Square bracket notation
+
+// // 5. Method vs Function and this Keyword
+// const person = {
+//   name: "Bob",
+//   greet() {
+//     console.log(`Hello, ${this.name}`); // 'this' refers to person
+//   },
+// };
+// person.greet(); // Hello, Bob
+
+// // 6. Shorthand Object Property
+// const name = "Charlie";
+// const age = 30;
+// const user2 = { name, age }; // Shorthand
+// console.log(user2); // { name: 'Charlie', age: 30 }
+
+// // 7. Math Object and Random Numbers
+// console.log(Math.PI); // 3.141592653589793
+// console.log(Math.random()); // Random number between 0 and 1
+
+// // 8. Primitive and Reference Types
+// let a = 5; // Primitive
+// let b = a;
+// b = 10;
+// console.log(a); // 5
+
+// const arr = [1, 2]; // Reference
+// const ref = arr;
+// ref.push(3);
+// console.log(arr); // [1, 2, 3]
+
+// // 9. DOM and Selecting Elements
+// document.getElementById("title").textContent = "New Title"; // ID
+// document.getElementsByClassName("item")[0].style.color = "red"; // Class
+// document.getElementsByTagName("p")[0].textContent = "Paragraph updated"; // Tag
+
+// // 10. Change HTML and Append Elements
+// document.getElementById("content").innerHTML = "<p>New Paragraph</p>";
+// const newElement = document.createElement("span");
+// newElement.textContent = "Appended text";
+// document.body.appendChild(newElement);
+
+// // 11. Change and Create Attributes
+// const img = document.getElementById("image");
+// img.setAttribute("src", "newImage.png"); // Change or create
+
+// // 12. Change Style and Add/Remove Classes
+// const element = document.getElementById("box");
+// element.style.backgroundColor = "blue"; // Change style
+// element.classList.add("highlight"); // Add class
+// element.classList.remove("highlight"); // Remove class
+// element.classList.toggle("hidden"); // Toggle class
