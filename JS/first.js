@@ -328,21 +328,21 @@ console.log(profile["userName"]); */
 
 // console.log(newArr);
 
-let n = prompt("Enter the value of 'n' ");
+// let n = prompt("Enter the value of 'n' ");
 
-let arr = [];
-for (let i = 1; i <= n; i++) {
-  arr[i - 1] = i;
-}
-console.log(arr);
+// let arr = [];
+// for (let i = 1; i <= n; i++) {
+//   arr[i - 1] = i;
+// }
+// console.log(arr);
 
-const newArr = arr.reduce((prev, curr) => {
-  return prev + curr;
-});
-console.log(newArr);
+// const newArr = arr.reduce((prev, curr) => {
+//   return prev + curr;
+// });
+// console.log(newArr);
 
-// Factorial
-const newArr1 = arr.reduce((prev, curr) => {
-  return prev * curr;
-});
-console.log(newArr1);
+// // Factorial
+// const newArr1 = arr.reduce((prev, curr) => {
+//   return prev * curr;
+// });
+// console.log(newArr1);
