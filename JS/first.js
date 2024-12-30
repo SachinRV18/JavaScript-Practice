@@ -346,3 +346,308 @@ console.log(profile["userName"]); */
 //   return prev * curr;
 // });
 // console.log(newArr1);
+
+// DOM
+
+// let ele = window.document;
+// console.log(ele); // prints the HTML elements
+// console.dir(ele); // prints the JS objects
+
+// DOM MANIPULATION
+
+// console.dir(document.body); // null - it will not load untill or DOM elements are not accessable when we write the script tag before the body tag.
+
+// // get element by ID
+// let idVal = document.getElementById("heading");
+// console.dir(idVal);
+
+// get element by className
+// let idVal = document.getElementsByClassName("myClass");
+// console.dir(idVal);
+
+// // get element by ID
+// let idVal = document.getElementsByTagName("p");
+// console.dir(idVal);
+
+// // get element by querySelector     // returns a first element
+// let ele = document.querySelector("p");
+// console.dir(ele);
+
+// let ele = document.querySelectorAll("p");  // returns all element
+// console.dir(ele);
+
+// just a tag : name("p")
+// using ID: # need to be used
+// using class: need to use .
+
+// let ele = document.querySelector(".myClass");
+// console.dir(ele);
+
+// browser codes
+// ele
+// <h2 class=​"myClass">​Hello class​</h2>
+// ele.tagName
+// 'H2'
+
+// let elememt = document.querySelector("div");
+// console.dir(elememt);
+
+// let elememt = document.querySelector("h1");
+// console.dir(elememt);
+// elememt.innerText = "New Heading"; // aigning a new value
+
+// elememt.textContent;
+
+// elememt.innerText;
+// ("");
+// elememt.textContent;
+// (" Old Heading");
+
+// let elem = document.querySelector("#heading");
+// console.dir(elem.innerText);
+// elem.innerText = elem.innerText + " from sachin!"; // concatination
+
+// let box = document.querySelectorAll(".box");
+// console.dir(box);
+
+// box[0].innerHTML = "new value 1";
+// box[1].innerHTML = "new value 2";
+// box[2].innerHTML = "new value 3";
+
+// or
+
+// let box = document.querySelectorAll(".box");
+// let idx = 1;
+// for (div of box) {
+//   div.innerText = `new value ${idx}`;
+//   idx++;
+// }
+
+// let divs = document.querySelector("div");
+// console.log(divs);
+
+// let id = divs.getAttribute("class");
+// console.log(id);
+
+// let divs = document.querySelector("p");
+// console.log(divs);
+
+// // let name = divs.getAttribute("name");
+// // console.log(name);
+
+// // let para = divs.getAttribute("class");
+// // console.log(para);
+
+// let para = divs.setAttribute("class", "newClass"); //change the classname
+// console.log(para);
+
+// let divs = document.querySelector("div");
+// console.log(divs);
+
+// divs.style.backgroundColor = "blue";
+// divs.style.fontSize = "26px";
+// divs.innerText = "hello from JS";
+// divs.style.visibility = "hidden"; // it will perform inline styling.
+
+// create an element
+
+// let elem = document.createElement("button");
+// elem.innerText = "ClickMe!";
+// console.log(elem);
+
+// let divs = document.querySelector("div");
+
+// divs.append(elem); // added a button at end
+// divs.prepend(elem); // added a button at first
+// divs.before(elem); // added a button before the strt of node
+// divs.after(elem); // added a button at the end of the node]
+
+// let par = document.querySelector("p");
+// par.after(elem); // added a btn after the paragraph
+// console.log(divs);
+
+// // let newHeading = document.createElement("h1");
+// // newHeading.innerText = " this is a heading added through JS";
+
+// // let body = document.querySelector("div");
+// // body.before(newHeading);
+
+// let newHeading = document.createElement("h1");
+// newHeading.innerHTML = "<i>This is a new Heading </i>";
+// document.querySelector("body").prepend(newHeading);
+
+// let para = document.querySelector("p");
+// para.remove("p"); // remove an element
+
+// let bodyElem = document.querySelector("body");
+// console.log(bodyElem);
+
+// let newBt = document.createElement("button");
+// newBt.innerText = "Submit!";
+
+// bodyElem.append(newBt);
+
+// let elem = document.querySelector("button");
+// elem.style.backgroundColor = "red";
+// elem.style.color = "white";
+
+// optimized way
+// let newBt = document.createElement("button");
+// newBt.innerText = "Submit!";
+
+// newBt.style.backgroundColor = "red";
+// newBt.style.color = "white";
+
+// document.querySelector("body").prepend(newBt);
+
+// let newPara = document.createElement("p");
+// newPara.innerHtml = "<i> This is added by Sachin!";
+
+// let oldPara = document.querySelector("p");
+// console.log(oldPara);
+
+// //Browser
+// p.para
+// para
+// oldPara
+// oldPara.setAttribute("class", "newClass);
+// VM19419:1 Uncaught SyntaxError: Invalid or unexpected token
+// oldPara.setAttribute("class", "newClass");
+
+// using classList
+
+// p.para
+// oldPara.classList
+// DOMTokenList ['para', value: 'para']
+// 0
+// :
+// "para"
+// length
+// :
+// 1
+// value
+// :
+// "para"
+// [[Prototype]]
+// :
+// DOMTokenList
+// oldPara.classList.add("newClass");
+// undefined
+// oldPara.classList
+// DOMTokenList(2) ['para', 'newClass', value: 'para newClass']
+// 0
+// :
+// "para"
+// 1
+// :
+// "newClass"
+// length
+// :
+// 2
+// value
+// :
+// "para newClass"
+// [[Prototype]]
+// :
+// DOMTokenList
+
+// // Events
+
+// Inline Event handling example
+// <button onclick="console.log('Hello Sachin'); alert('hello')">
+// Click me!
+// </button>
+// <button ondblclick="console.log('hello you clicked twice!')">
+// Click me twice!
+// </button>
+// <div onmouseover="console.log('MouseOver done!')">This is a div</div>
+// <script src="/JS/first.js"></script>
+
+// from external Js file
+// let btn1 = document.querySelector("#button1");
+// btn1.onclick = () => {
+//   console.log("hello Button was clicked!");
+// };
+
+// Event Object : it is a spcl object that contain the details about the event like target and type, clientX, clientY..
+
+// let btn1 = document.querySelector("#button1");
+// btn1.onclick = (evt) => {
+//   console.log(evt);
+//   console.log(evt.target);
+//   console.log(evt.type);
+//   console.log(evt.clientX, evt.clientY);
+// };
+
+// we can also pass event Object
+// btn1.addEventListener("click", (evt) => {
+//   console.log("button was clicked");
+//   console.log(evt.type);
+// });
+
+// let div1 = document.querySelector("#division1");
+// div1.addEventListener("mouseover", () => {
+//   console.log("hovered");
+// });
+
+// let btn1 = document.querySelector("#button1");
+// btn1.addEventListener("click", () => {
+//   console.log("button was clicked - 1");
+// });
+
+// btn1.addEventListener("click", () => {
+//   console.log("button was clicked - 2");
+// });
+
+// const handler3 = () => {
+//   console.log("button was clicked - 3");
+// };
+
+// btn1.addEventListener("click", handler3);
+
+// btn1.addEventListener("click", () => {
+//   console.log("button was clicked - 4");
+// });
+
+// btn1.removeEventListener("click", handler3);
+
+// it was not removed because the memory location is not same
+
+// that's why we store it in one variable and we can remove it.
+
+//Practice mode
+// let btn = document.querySelector("#btn");
+// let currentMode = "light";
+
+// btn.addEventListener("click", () => {
+//   console.log("current mode", currentMode);
+//   // console.log("you are trying to change mode");
+//   if (currentMode === "light") {
+//     currentMode = "dark";
+//     document.querySelector("body").style.backgroundColor = "black";
+//   } else {
+//     currentMode = "light";
+//     document.querySelector("body").style.backgroundColor = "white";
+//   }
+//   console.log("changed currentMode", currentMode);
+// });
+
+// or
+// let btn = document.querySelector("#btn");
+// let currentMode = "light";
+// let body = document.querySelector("body");
+
+// btn.addEventListener("click", () => {
+//   console.log("current mode", currentMode);
+//   // console.log("you are trying to change mode");
+//   if (currentMode === "light") {
+//     currentMode = "dark";
+//     body.classList.add("dark");
+//     body.classList.remove("light");
+//   } else {
+//     currentMode = "light";
+//     body.classList.add("light");
+//     body.classList.remove("dark");
+//   }
+//   console.log("changed to", currentMode);
+// });
