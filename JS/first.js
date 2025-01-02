@@ -651,3 +651,343 @@ console.log(profile["userName"]); */
 //   }
 //   console.log("changed to", currentMode);
 // });
+
+//classes and objects
+
+// const student = {
+//   fullName: "Sachin",
+//   marks: 9.4,
+//   fullMarks: function () {
+//     console.log("marks is", this.marks); // this points to the current object that is student
+//   },
+// };
+
+// const MyStudent1 = {
+//   subject: "DBMS",
+// };
+
+// MyStudent1.__proto__ = student;
+// // we can now access one function from object 1 to another one.
+
+//constructor
+
+// class ToyotaCar {
+//   constructor(brand, milage) {
+//     console.log("This is a constructor");
+//     this.brand = brand;
+//     this.milage = milage;
+//   }
+//   start() {
+//     console.log("start");
+//   }
+//   stop() {
+//     console.log("stop");
+//   }
+// }
+
+// let fortuner = new ToyotaCar("ABC", 10); // constructor
+// console.log(fortuner); // object is type toyota
+
+// let lexus = new ToyotaCar("DCS", 20); // constructor
+// console.log(lexus); // object is type toyota
+
+//Inheritance
+// class Parent {
+//   hello() {
+//     console.log("hello");
+//   }
+// }
+// class child extends Parent {}
+
+// let obj = new Parent();
+
+// class Person {
+//   constructor(name) {
+//     this.species = "Homo sapiens";
+//     this.name = name;
+//   }
+//   eat() {
+//     console.log("eat");
+//   }
+//   sleep() {
+//     console.log("sleep");
+//   }
+// }
+
+// class Enginner extends Person {
+//   constructor(name) {
+//     super(name);
+//   }
+//   Work() {
+//     console.log("Building a Project");
+//   }
+// }
+
+// let SachinObj = new Enginner("sachin");
+
+// class user {
+//   constructor(name, email) {
+//     this.name = name;
+//     this.email = email;
+//   }
+//   viewData() {
+//     console.log("Website View");
+//   }
+// }
+
+// class admin extends user {
+//   editData() {
+//     data = "new some value";
+//   }
+// }
+
+// let student1 = new user("sachin", "abc@gmail.com");
+// let student2 = new user("aman", "aman@gmail.com");
+
+// error handling
+
+// let a = 10;
+// let b = 20;
+
+// console.log("a+b", a + b);
+// console.log("a+b", a + b);
+// console.log("a+b", a + b);
+// try {
+//   console.log("a+b", a + bb); // error
+// } catch (error) {
+//   console.log("error", error);
+// }
+// console.log("a+b", a + b);
+// console.log("a+b", a + b);
+// console.log("a+b", a + b);
+// console.log("a+b", a + b);
+
+//sync and Async Programming
+
+// sync programming
+// console.log("a");
+// console.log("b");
+// console.log("c");
+// console.log("d");
+// console.log("e");
+
+// Async programming
+
+// function hello() {
+//   console.log("hello");
+// }
+
+// setTimeout(hello, 5000); // 5Sec = 5000 milliseconds
+
+// console.log("a");
+// console.log("b");
+
+// setTimeout(function () {
+//   console.log("hello");
+// }, 5000);
+
+// // same function in arrow function
+// setTimeout(() => {
+//   console.log(" arrow hello");
+// }, 3000);
+
+// console.log("c");
+// console.log("d");
+// console.log("e");
+
+// callbackhell
+
+// function getData(dataId, getNextData) {
+//   //2s
+//   setTimeout(() => {
+//     console.log("dataId", dataId);
+//     if (getNextData) {
+//       getNextData();
+//     }
+//   }, 2000);
+// }
+
+// // getData(1, 2); // we get an error getdata is not a function so to solve this
+// getData(1, () => {
+//   getData(2, () => {
+//     getData(3, () => {
+//       getData(4);
+//     });
+//   });
+// });
+
+// // solution using promise chain
+
+// function getData(dataId) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("dataId", dataId);
+//       resolve("success");
+//     }, 2000);
+//   });
+// }
+
+// getData(1)
+//   .then((res) => {
+//     return getData(2);
+//   })
+//   .then((res) => {
+//     return getData(3);
+//   })
+//   .then((res) => {
+//     console.log(res);
+//   });
+
+// // solution using async await
+// function getData(dataId) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("dataId", dataId);
+//       resolve("success");
+//     }, 2000);
+//   });
+// }
+
+// async function getAllData() {
+//   await getData(1);
+//   await getData(2);
+//   await getData(3);
+// }
+
+// console.log(getAllData());
+
+// solution using async await
+// function getData(dataId) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("dataId", dataId);
+//       resolve("success");
+//     }, 2000);
+//   });
+// }
+
+// (async function () {
+//   await getData(1);
+//   await getData(2);
+//   await getData(3);
+// })();
+
+// promises
+
+// let promise = new Promise((resolve, reject) => {
+//   console.log("I am a promise"); // pending
+//   // resolve("success"); // success
+//   // reject("fail"); // fail
+// });
+
+// function getData(dataId, getNextData) {
+//   return new Promise((resolve, reject) => {
+//     //2s
+//     setTimeout(() => {
+//       console.log("dataId", dataId);
+//       resolve("success");
+//       if (getNextData) {
+//         getNextData();
+//       }
+//     }, 5000);
+//   });
+// }
+
+// O / P
+// let promise = getData(123)
+// undefined
+// promise
+// Promise {<pending>}[[Prototype]]: Promise[[PromiseState]]: "fulfilled"[[PromiseResult]]: "success"
+// first.js:831 dataId 123
+// promise
+
+// const getPromise = () => {
+//   return new Promise((resolve, reject) => {
+//     console.log("I am a promise"); // pending
+//     // resolve("success"); // success
+//     reject("fail"); // fail
+//   });
+// };
+// let promise = getPromise();
+// promise.then((res) => {
+//   console.log("promise fulfilled:", res);
+// });
+
+// promise.catch((err) => {
+//   console.log("promise not fulfilled:", err);
+// });
+
+// example async function
+
+// function asyncFun() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("data1");
+//       resolve("success");
+
+//       reject("fail");
+//     }, 4000);
+//   });
+// }
+
+// console.log("fetching data");
+// let p1 = asyncFun();
+// p1.then((res) => {
+//   console.log(res);
+// });
+
+// Promise then
+// function asyncFun1() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("data1");
+//       resolve("success");
+
+//       // reject("fail");
+//     }, 4000);
+//   });
+// }
+
+// function asyncFun2() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("data2");
+//       resolve("success");
+
+//       // reject("fail");
+//     }, 4000);
+//   });
+// }
+
+// console.log("fetching data...1");
+// let p1 = asyncFun1();
+// p1.then((res) => {
+//   console.log(res);
+// });
+
+// console.log("fetching data...2");
+// let p2 = asyncFun2();
+// p2.then((res) => {
+//   console.log(res);
+// }); // it will fetch same time
+
+// console.log("fetching data...1");
+// let p1 = asyncFun1();
+// p1.then((res) => {
+//   console.log(res);
+//   console.log("fetching data...2");
+//   let p2 = asyncFun2();
+//   p2.then((res) => {
+//     console.log(res);
+//   });
+// }); // adding 2nd then in the 1st one
+
+// simplified Way
+// console.log("fetching data...1");
+// asyncFun1().then((res) => {
+//   console.log(res);
+//   console.log("fetching data...2");
+//   asyncFun2().then((res) => {
+//     console.log(res);
+//   });
+// }); // adding 2nd then in the 1st one
