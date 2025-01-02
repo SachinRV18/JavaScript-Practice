@@ -1,6 +1,72 @@
-.hidden {
+/* .hidden {
   display: none;
 }
 .highlight {
   border: 2px solid red;
+}
+
+
+
+h1 {
+  background-color: rgb(3, 12, 12);
+  color: white;
+}
+
+body {
+  background-color: rgba(137, 43, 226, 0.466);
+}
+
+button {
+  background-color: blue;
+}
+
+#heading {
+  color: brown;
+}
+
+.myClass {
+  color: blue;
+}
+.box {
+  height: 100px;
+  width: 100px;
+  border: 2px solid black;
+  margin: 5px;
+  background-color: aquamarine;
+  text-align: center;
+}  */
+
+ body {
+  background-color: aqua;
+}
+
+.para {
+  background-color: black;
+  color: aliceblue;
+  height: 250px;
+  width: 500px;
+}
+
+.newPara {
+  background-color: aliceblue;
+}
+
+/* // Events
+
+div {
+  height: 100px;
+  width: 100px;
+  color: rgb(8, 0, 0);
+  background-color: rgb(182, 127, 255);
+  border: 2px solid black;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
+.light {
+  background-color: white;
+  color: black;
 }
