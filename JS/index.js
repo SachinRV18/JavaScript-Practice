@@ -1,6 +1,6 @@
-// alert("Hello Sachin!!")
-// console.log(123)
-// console.log("sachin")
+alert("Hello Sachin!!");
+console.log(123);
+console.log("sachin");
 
 // var my_name = "sachin";
 // console.log(my_name)

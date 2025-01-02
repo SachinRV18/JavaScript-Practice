@@ -9,7 +9,7 @@
 
 // console.log(product);
 
-/* const profile = {
+const profile = {
   userName: "iamsachinrv",
   posts: 36,
   followers: 569,
@@ -22,7 +22,7 @@
 console.log(profile);
 
 console.log(profile.userName);
-console.log(profile["userName"]); */
+console.log(profile["userName"]);
 
 // let a = 5;
 // // console.log("a:", a);

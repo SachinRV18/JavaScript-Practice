@@ -1,11 +1,9 @@
-/* .hidden {
+.hidden {
   display: none;
 }
 .highlight {
   border: 2px solid red;
 }
-
-
 
 h1 {
   background-color: rgb(3, 12, 12);
@@ -34,9 +32,9 @@ button {
   margin: 5px;
   background-color: aquamarine;
   text-align: center;
-}  */
+}
 
- body {
+body {
   background-color: aqua;
 }
 
@@ -51,7 +49,7 @@ button {
   background-color: aliceblue;
 }
 
-/* // Events
+/* Events */
 
 div {
   height: 100px;
