@@ -991,3 +991,56 @@ console.log(profile["userName"]); */
 //     console.log(res);
 //   });
 // }); // adding 2nd then in the 1st one
+
+//APIs and API Calls
+
+// let URL = "https://cat-fact.herokuapp.com/facts";
+
+// let factsData = document.querySelector("#facts");
+// let buttonData = document.querySelector("#btn");
+
+// let promise = fetch(URL);
+// console.log(promise); //getting the response
+
+//get an response from API is an asynchronous call, so we use async and await
+// const getFacts = (async () => {
+//   console.log("Fetchin the data...");
+//   let response = await fetch(URL);
+//   console.log(response);
+//   // console.log(response.status); // to get the status
+//   let data = await response.json();
+//   console.log(data);
+//   console.log(data[0]); // getting 1st data from API
+//   factsData.innerText = data[0].text;
+// })();
+
+// const getFacts = async () => {
+//   console.log("Fetchin the data...");
+//   let response = await fetch(URL);
+//   // console.log(response.status); // to get the status
+//   let data = await response.json();
+//   factsData.innerText = data[0].text;
+// };
+
+// solve this using promise chaining
+
+// function getFacts() {
+//   fetch(URL)
+//     .then((response) => {
+//       return response.json();
+//     })
+//     .then((data) => {
+//       console.log(data);
+//       factsData.innerText = data[2].text;
+//     });
+// }
+
+// const getFacts = async () => {
+//   console.log("Fetchin the data...");
+//   let response = await fetch(URL);
+//   // console.log(response.status); // to get the status
+//   let data = await response.json();
+//   console.log(response);
+//   factsData.innerText = data[0].text;
+// };
+// btn.addEventListener("click", getFacts);
